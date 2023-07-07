@@ -67,8 +67,13 @@ class UT_Theme_Helper {
 	function register_menus() {
 
 		register_nav_menus( [
-			'menu_1' => esc_html__( 'Header', 'unreal-theme' ),
-			'menu_2' => esc_html__( 'Footer', 'unreal-theme' ),
+			'menu_header' => esc_html__( 'Header', 'unreal-theme' ),
+			'menu_footer_1' => esc_html__( 'Footer 1', 'unreal-theme' ),
+			'menu_footer_2' => esc_html__( 'Footer 2', 'unreal-theme' ),
+			'menu_footer_3' => esc_html__( 'Footer 3', 'unreal-theme' ),
+			'menu_footer_4' => esc_html__( 'Footer 4', 'unreal-theme' ),
+			'menu_footer_5' => esc_html__( 'Footer 5', 'unreal-theme' ),
+			'menu_copyright' => esc_html__( 'Copyright', 'unreal-theme' ),
 		] );
 	}
 
