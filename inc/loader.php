@@ -15,7 +15,7 @@ class UT_Theme_Helper {
   	private static $_instance = null;
 
   	// public $example;
-	//   public $guneberg_blocks;
+	  public $guneberg_blocks;
 
   	private function __construct() {
 
@@ -49,7 +49,7 @@ class UT_Theme_Helper {
 	function load_classes() {
 
 		// $this->example = UT_Example::get_instance();
-		// $this->guneberg_blocks = UT_Guneberg_Blocks::get_instance();
+		$this->guneberg_blocks = UT_Guneberg_Blocks::get_instance();
 	}
 
 	/**
@@ -108,8 +108,8 @@ class UT_Theme_Helper {
 		// ========================================= CSS ========================================= //
 		wp_enqueue_style( 'ut-style', get_stylesheet_uri() );
 		wp_enqueue_style( 'ut-main', THEME_URI . '/css/style.css' );
-		wp_enqueue_style( 'ut-owl.carousel', THEME_URI . '/css/owl.carousel.min.css.css' );
-		wp_enqueue_style( 'ut-jquery-ui', THEME_URI . '/css/jquery-ui.css.css' );
+		wp_enqueue_style( 'ut-owl.carousel', THEME_URI . '/css/owl.carousel.min.css' );
+		wp_enqueue_style( 'ut-jquery-ui', THEME_URI . '/css/jquery-ui.css' );
 		wp_enqueue_style( 'ut-responsive', THEME_URI . '/css/responsive.css' );
 		// ========================================= JS ========================================= //
 		//////////////////////////////////////
@@ -156,7 +156,7 @@ class UT_Theme_Helper {
 	public function import() {
 
 		include_once 'helpers.php';
-		// include_once 'class.gutenberg-blocks.php';
+		include_once 'class.gutenberg-blocks.php';
 		// include_once 'woo-functions.php';
 		// include_once 'disable-editor.php';
 		// include_once 'pagination.php';
