@@ -72,7 +72,7 @@ $form = get_field('form_b2');
 
                         <?php if ( $txt_btn && $form ) : ?>
                             <div class="top_header_btn">
-                                <button type="button" class="btn" data-popup-id="<?php echo $id; ?>" onclick="return false">
+                                <button type="button" class="btn open_popup" data-popup-id="<?php echo $id; ?>" onclick="return false">
                                     <?php echo esc_html($txt_btn); ?>
                                 </button>
                             </div> 

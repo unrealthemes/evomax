@@ -63,7 +63,7 @@ $blocks = get_field('blocks_2');
                                     <?php endif; ?>
 
                                     <?php if ( $block['txt_btn_blocks_2'] && $block['form_blocks_2'] ) : ?>
-                                        <button type="button" class="btn_white" data-popup-id="<?php echo $id; ?>" onclick="return false">
+                                        <button type="button" class="btn_white open_popup" data-popup-id="<?php echo $id; ?>" onclick="return false">
                                             <?php echo esc_html($block['txt_btn_blocks_2']); ?>
                                         </button>
                                         <?php get_template_part('template-parts/modals/request', 'call', ['id' => $id, 'form' => $block['form_blocks_2']]); ?>

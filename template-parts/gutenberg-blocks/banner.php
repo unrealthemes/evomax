@@ -55,11 +55,11 @@ $brands_b = get_field('brands_b_b');
 
                 <?php if ( $txt_btn && $form ) : ?>
                     <div class="top_header_btn">
-                        <button type="button" class="btn" data-popup-id="<?php echo $id; ?>" onclick="return false">
+                        <button type="button" class="btn open_popup" data-popup-id="<?php echo $id; ?>" onclick="return false">
                             <?php echo esc_html($txt_btn); ?>
                         </button>
                     </div> 
-                    <?php get_template_part('template-parts/modals/request', 'call', ['id' => $id, 'form' => $form]); ?>
+                    <?php get_template_part('template-parts/modals/request-call', null, ['id' => $id, 'form' => $form]); ?>
                 <?php endif; ?>
 
                 <?php if ( $bg_url ) : ?>
