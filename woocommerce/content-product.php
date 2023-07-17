@@ -26,14 +26,25 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 
 $img_url = get_the_post_thumbnail_url( $product->get_id(), 'full' );
 $img_url = ( !$img_url ) ? wc_placeholder_img_src() : $img_url;
+$number_persons = get_post_meta( $product->get_id(), '_number_persons', true );
+$processing_volume = get_post_meta( $product->get_id(), '_processing_volume', true );
+$salvo_drop = get_post_meta( $product->get_id(), '_salvo_drop', true );
+$turnkey_installation = get_post_meta( $product->get_id(), '_turnkey_installation', true );
+$novelty = get_post_meta( $product->get_id(), '_novelty', true );
+$promotion = get_post_meta( $product->get_id(), '_promotion', true );
+
 ?>
 
 <div <?php wc_product_class( 'item object_item', $product ); ?> > 
     <div class="object_item_vn">
 
-        <div class="label_new">Новинка</div>
+        <?php if ( $novelty ) : ?>
+            <div class="label_new">Новинка</div>
+        <?php endif; ?>
 
-        <div class="label_sale">Акция</div>
+        <?php if ( $promotion ) : ?>
+            <div class="label_sale">Акция</div>
+        <?php endif; ?>
         
         <a href="#" class="label_compare">
             <img src="<?php echo THEME_URI; ?>/img/label_compare.svg" alt="compare"> 
@@ -58,31 +69,50 @@ $img_url = ( !$img_url ) ? wc_placeholder_img_src() : $img_url;
             </div> 
 
             <ul class="object_ul">
-                <li class="object_li">
-                    <div class="object_li_title">Количество человек</div>
-                    <span>3</span>
-                </li>
-                <li class="object_li">
-                    <div class="object_li_title">Объем переработки</div>
-                    <span>10 м³</span>
-                </li>
-                <li class="object_li">
-                    <div class="object_li_title">Залповый сброс</div>
-                    <span>421 л</span>
-                </li>
-                <li class="object_li object_li_price">
-                    <div class="object_li_title">Стоимость</div>
-                    <span><?php echo wc_price($product->get_price()); ?></span>
-                </li>
-                <li class="object_li object_li_montash_price">
-                    <div class="object_li_title">Монтаж под ключ </div>
-                    <span>от 27 000 ₽</span>
-                </li> 
+
+                <?php if ( $number_persons ) : ?>
+                    <li class="object_li">
+                        <div class="object_li_title">Количество человек</div>
+                        <span><?php echo esc_html($number_persons); ?></span>
+                    </li>
+                <?php endif; ?>
+
+                <?php if ( $processing_volume ) : ?>
+                    <li class="object_li">
+                        <div class="object_li_title">Объем переработки</div>
+                        <span><?php echo esc_html($number_persons); ?> м³</span>
+                    </li>
+                <?php endif; ?>
+
+                <?php if ( $salvo_drop ) : ?>
+                    <li class="object_li">
+                        <div class="object_li_title">Залповый сброс</div>
+                        <span><?php echo esc_html($salvo_drop); ?> л</span>
+                    </li>
+                <?php endif; ?>
+
+                <?php if ( $product->get_price() ) : ?>
+                    <li class="object_li object_li_price">
+                        <div class="object_li_title">Стоимость</div>
+                        <span><?php echo wc_price($product->get_price()); ?></span>
+                    </li>
+                <?php endif; ?>
+
+                <?php if ( $turnkey_installation ) : ?>
+                    <li class="object_li object_li_montash_price">
+                        <div class="object_li_title">Монтаж под ключ </div>
+                        <span>от <?php echo wc_price($turnkey_installation); ?></span>
+                    </li> 
+                <?php endif; ?>
+
             </ul>
         
             <div class="object_desc_btn">
+
                 <a href="#" class="btn_transparent">заказать с установкой</a>
+
                 <a href="#" class="btn">заказать в 1 клик</a>
+
             </div> 
         </div> 
         <?php
