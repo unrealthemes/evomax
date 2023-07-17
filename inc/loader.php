@@ -14,8 +14,11 @@ class UT_Theme_Helper {
 
   	private static $_instance = null;
 
-  	// public $example;
-	  public $guneberg_blocks;
+	public $breadcrumbs;
+
+  	public $product;
+
+	public $guneberg_blocks;
 
   	private function __construct() {
 
@@ -48,7 +51,7 @@ class UT_Theme_Helper {
 
 	function load_classes() {
 
-		// $this->example = UT_Example::get_instance();
+		$this->breadcrumbs = UT_Breadcrumbs::get_instance();
 		$this->guneberg_blocks = UT_Guneberg_Blocks::get_instance();
 	}
 
@@ -118,6 +121,7 @@ class UT_Theme_Helper {
 		wp_deregister_script('jquery');
 		wp_register_script('jquery', false, ['jquery-core'], null, true);
 		//////////////////////////////////////
+		wp_enqueue_script( 'ut-select', THEME_URI . '/js/select.js', ['jquery'], date("Ymd"), false );
 		wp_enqueue_script( 'ut-modernizr', THEME_URI . '/js/modernizr.js', ['jquery'], date("Ymd"), false );
 		wp_enqueue_script( 'ut-jquery-ui', THEME_URI . '/js/jquery-ui.js', ['jquery'], date("Ymd"), false );
 		wp_enqueue_script( 'ut-owl.carousel.min', THEME_URI . '/js/owl.carousel.min.js', ['jquery'], date("Ymd"), false );
@@ -161,7 +165,8 @@ class UT_Theme_Helper {
 		// include_once 'disable-editor.php';
 		// include_once 'pagination.php';
 		// include_once 'walker-nav-menu.php';
-		// include_once 'class.example.php';
+		include_once 'class.breadcrumbs.php';
+		include_once 'class.product.php';
 	}
 
 }

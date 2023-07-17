@@ -164,6 +164,24 @@ class UT_Guneberg_Blocks {
             ]);
             
             acf_register_block_type([
+                'name'              => 'contacts',
+                'title'             => 'Контакты',
+                // 'description'       => __('A custom description.'),
+                'render_template'   => 'template-parts/gutenberg-blocks/contacts.php',
+                'category'          => 'evomax',
+                'icon'              => 'evomax_icon',
+                'keywords'          => [ 'Контакты' ],
+                'example'           => [
+                    'attributes' => [
+                        'mode' => 'preview',
+                        'data' => [
+                            'is_preview' => true
+                        ]
+                    ]
+                ]
+            ]);
+            
+            acf_register_block_type([
                 'name'              => 'photo-slider',
                 'title'             => 'Фото слайдер',
                 // 'description'       => __('A custom description.'),

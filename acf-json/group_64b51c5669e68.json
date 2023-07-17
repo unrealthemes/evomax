@@ -1,0 +1,55 @@
+{
+    "key": "group_64b51c5669e68",
+    "title": "Map",
+    "fields": [
+        {
+            "key": "field_64b51c56b16e4",
+            "label": "map",
+            "name": "map_page",
+            "aria-label": "",
+            "type": "yandex-map",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "height": 500,
+            "map_type": "map",
+            "zoom": 10,
+            "zoom_control": 0,
+            "scroll_zoom": 0,
+            "center_lat": "50.450001",
+            "center_lng": "30.523333",
+            "return_format": "html"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1689590972
+}

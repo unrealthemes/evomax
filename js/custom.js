@@ -1,7 +1,18 @@
 jQuery(document).ready(function() {
     "use strict"; 
 
-     
+    // sidebar
+    jQuery(".sidebar_btn").on('click', function(){
+        jQuery(this).toggleClass("close_minus")
+    }); 
+    
+    jQuery(".sidebar_btn").on('click', function(){
+        jQuery(this).next(".sidebar").toggle("fast")
+    });
+    
+    jQuery(".header_menu2_close").on('click', function(){
+        jQuery(this).parents(".sidebar:first").hide("fast")
+    });     
        
     
     // popup
@@ -419,7 +430,6 @@ jQuery(document).on('click', function(e) {
             this.value = parseInt(jQuery(this).data('max-count'));
         }    
     });    
-        
         
    
      
