@@ -212,7 +212,7 @@ function ut_class_names( $classes ) {
 function ut_remove_product_editor() {
     remove_post_type_support( 'product', 'editor' );
 }
-add_action( 'init', 'ut_remove_product_editor' );
+// add_action( 'init', 'ut_remove_product_editor' );
 
 
 
@@ -278,4 +278,4 @@ function ut_branding_login() {
 function ut_custom_login_url( $url ) {
     return home_url();
 }
-// add_filter( 'login_headerurl', 'ut_custom_login_url' );
+add_filter( 'login_headerurl', 'ut_custom_login_url' );

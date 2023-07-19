@@ -73,10 +73,10 @@ $txt = get_field('txt_about');
                             <?php endif; ?>
 
                             <?php if ( $txt_btn && $form ) : ?>
-                                <button type="button" class="btn_transparent open_popup" data-popup-id="<?php echo $id; ?>" onclick="return false">
+                                <button type="button" class="btn_transparent open_popup" data-popup-id="<?php echo 'abt_' . $id; ?>" onclick="return false">
                                     <?php echo $txt_btn; ?>
                                 </a>
-                                <?php get_template_part('template-parts/modals/request', 'call', ['id' => $id, 'form' => $form]); ?>
+                                <?php get_template_part('template-parts/modals/request', 'call', ['id' => 'abt_' . $id, 'form' => $form]); ?>
                             <?php endif; ?>
 
                         </div>

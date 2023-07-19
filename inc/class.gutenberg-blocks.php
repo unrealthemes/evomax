@@ -306,6 +306,24 @@ class UT_Guneberg_Blocks {
                     ]
                 ]
             ]);
+            
+            acf_register_block_type([
+                'name'              => 'related-products',
+                'title'             => 'Похожие товары',
+                // 'description'       => __('A custom description.'),
+                'render_template'   => 'template-parts/gutenberg-blocks/related-products.php',
+                'category'          => 'evomax',
+                'icon'              => 'evomax_icon',
+                'keywords'          => [ 'Товары', 'Похожие' ],
+                'example'           => [
+                    'attributes' => [
+                        'mode' => 'preview',
+                        'data' => [
+                            'is_preview' => true
+                        ]
+                    ]
+                ]
+            ]);
 
         }
     }

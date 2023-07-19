@@ -239,3 +239,26 @@ ul.page-numbers li {
 .contact_info .btn.open_popup {
     width: 100%;
 }
+
+.woocommerce span.onsale {
+    display: none;
+}
+
+.price .amount bdi {
+    color: #000;
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.price_sale .amount bdi {
+    color: #B3B3B3;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.price .amount bdi .woocommerce-Price-currencySymbol {
+    font-size: 30px;
+    display: inline-block;
+}

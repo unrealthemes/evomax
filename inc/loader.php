@@ -53,6 +53,7 @@ class UT_Theme_Helper {
 
 		$this->breadcrumbs = UT_Breadcrumbs::get_instance();
 		$this->guneberg_blocks = UT_Guneberg_Blocks::get_instance();
+		$this->product = UT_Product::get_instance();
 	}
 
 	/**

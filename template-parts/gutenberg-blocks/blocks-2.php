@@ -46,7 +46,7 @@ $blocks = get_field('blocks_2');
                     <div class="block_baner">
 
                         <?php 
-                        foreach ( $blocks as $block ) : 
+                        foreach ( $blocks as $key => $block ) : 
                             $img_url = wp_get_attachment_url( $block['img_blocks_2'], 'full' );
                             $bg_img_url = ($img_url) ? 'background-image: url(' . $img_url . ');' : '';
                         ?>
@@ -63,10 +63,10 @@ $blocks = get_field('blocks_2');
                                     <?php endif; ?>
 
                                     <?php if ( $block['txt_btn_blocks_2'] && $block['form_blocks_2'] ) : ?>
-                                        <button type="button" class="btn_white open_popup" data-popup-id="<?php echo $id; ?>" onclick="return false">
+                                        <button type="button" class="btn_white open_popup" data-popup-id="<?php echo $key . '_' . $id; ?>" onclick="return false">
                                             <?php echo esc_html($block['txt_btn_blocks_2']); ?>
                                         </button>
-                                        <?php get_template_part('template-parts/modals/request', 'call', ['id' => $id, 'form' => $block['form_blocks_2']]); ?>
+                                        <?php get_template_part('template-parts/modals/request', 'call', ['id' => $key . '_' . $id, 'form' => $block['form_blocks_2']]); ?>
                                     <?php endif; ?>
 
                                 </div>
