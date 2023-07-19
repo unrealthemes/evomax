@@ -395,25 +395,25 @@ $form = get_field('form_h', 'option'); // TO DO
                                 <div class="visible_xs mobile_menu_btn_vn ">
                                     <a href="#" class="open_popup btn transparent_white block_icon" data-popup-id="popup1" onclick="return false">
                                         <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M4 0.499957C4.493 0.499957 4.889 0.89596 4.889 1.38896C4.889 2.49596 5.067 3.56696 5.396 4.56196C5.493 4.86896 5.422 5.21996 5.178 5.46396L3.222 7.42996C4.502 9.94497 6.56 12.003 9.08 13.283L11.036 11.323C11.28 11.079 11.631 11.008 11.938 11.105C12.933 11.435 14.004 11.612 15.111 11.612C15.604 11.612 16 12.008 16 12.501V15.612C16 16.105 15.604 16.501 15.111 16.501C6.764 16.5 0 9.73597 0 1.38896C0 0.89596 0.4 0.499957 0.889 0.499957H4ZM12.493 0.0929565L16.089 3.56596L8.734 7.58396L12.493 0.0929565Z" fill="white"/>
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M4 0.499957C4.493 0.499957 4.889 0.89596 4.889 1.38896C4.889 2.49596 5.067 3.56696 5.396 4.56196C5.493 4.86896 5.422 5.21996 5.178 5.46396L3.222 7.42996C4.502 9.94497 6.56 12.003 9.08 13.283L11.036 11.323C11.28 11.079 11.631 11.008 11.938 11.105C12.933 11.435 14.004 11.612 15.111 11.612C15.604 11.612 16 12.008 16 12.501V15.612C16 16.105 15.604 16.501 15.111 16.501C6.764 16.5 0 9.73597 0 1.38896C0 0.89596 0.4 0.499957 0.889 0.499957H4ZM12.493 0.0929565L16.089 3.56596L8.734 7.58396L12.493 0.0929565Z" fill="white"/>
                                         </svg> 
                                         <span>Заказать звонок</span>
                                     </a>
                                     
                                     <a href="#" class="btn_white popup_btn block_icon">
                                         <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <g clip-path="url(#clip0_198_11272)">
-                                        <path d="M13.5 0H1.5C0.949 0 0.5 0.449 0.5 1V15C0.5 15.552 0.949 16 1.5 16H13.5C14.052 16 14.5 15.552 14.5 15V1C14.5 0.449 14.052 0 13.5 0ZM4.5 14H2.5V12H4.5V14ZM4.5 10H2.5V8H4.5V10ZM8.5 14H6.5V12H8.5V14ZM8.5 10H6.5V8H8.5V10ZM12.5 14H10.5V8H12.5V14ZM12.5 5.5C12.5 5.77601 12.276 6 12 6H3C2.72399 6 2.5 5.77601 2.5 5.5V2.5C2.5 2.22399 2.72399 2 3 2H12C12.276 2 12.5 2.22399 12.5 2.5V5.5Z" fill="url(#paint0_linear_198_11272)"/>
-                                        </g>
-                                        <defs>
-                                        <linearGradient id="paint0_linear_198_11272" x1="0.5" y1="16" x2="14.5756" y2="15.988" gradientUnits="userSpaceOnUse">
-                                        <stop stop-color="#74B427"/>
-                                        <stop offset="1" stop-color="#345D02"/>
-                                        </linearGradient>
-                                        <clipPath id="clip0_198_11272">
-                                        <rect width="14" height="16" fill="white" transform="translate(0.5)"/>
-                                        </clipPath>
-                                        </defs>
+                                            <g clip-path="url(#clip0_198_11272)">
+                                                <path d="M13.5 0H1.5C0.949 0 0.5 0.449 0.5 1V15C0.5 15.552 0.949 16 1.5 16H13.5C14.052 16 14.5 15.552 14.5 15V1C14.5 0.449 14.052 0 13.5 0ZM4.5 14H2.5V12H4.5V14ZM4.5 10H2.5V8H4.5V10ZM8.5 14H6.5V12H8.5V14ZM8.5 10H6.5V8H8.5V10ZM12.5 14H10.5V8H12.5V14ZM12.5 5.5C12.5 5.77601 12.276 6 12 6H3C2.72399 6 2.5 5.77601 2.5 5.5V2.5C2.5 2.22399 2.72399 2 3 2H12C12.276 2 12.5 2.22399 12.5 2.5V5.5Z" fill="url(#paint0_linear_198_11272)"/>
+                                            </g>
+                                            <defs>
+                                                <linearGradient id="paint0_linear_198_11272" x1="0.5" y1="16" x2="14.5756" y2="15.988" gradientUnits="userSpaceOnUse">
+                                                    <stop stop-color="#74B427"/>
+                                                    <stop offset="1" stop-color="#345D02"/>
+                                                </linearGradient>
+                                                <clipPath id="clip0_198_11272">
+                                                    <rect width="14" height="16" fill="white" transform="translate(0.5)"/>
+                                                </clipPath>
+                                            </defs>
                                         </svg>
 
                                         <span>Рассчитать стоимость онлайн</span>

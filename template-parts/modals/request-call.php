@@ -1,6 +1,6 @@
 <?php 
 $form = $args['form'];
-$contact_form = WPCF7_ContactForm::get_instance( $form->ID );
+$contact_form = WPCF7_ContactForm::get_instance( $form );
 ?>
 
 <div id="<?php echo esc_attr($args['id']); ?>" class="open_popup_content white">
