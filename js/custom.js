@@ -15,7 +15,22 @@ jQuery(document).ready(function() {
       });
     });
     
-     
+    $(window).scroll(function() {
+      var blockSteep3Top = $('.block_steep3').offset().top;
+      var scrollTop = $(window).scrollTop();
+      var blockQestions = $('.block_qestions');
+
+      if (scrollTop >= blockSteep3Top) {
+        blockQestions.addClass('fixed2');
+      } else {
+        blockQestions.removeClass('fixed2');
+      }
+    });
+
+
+
+
+
   
 
     // sidebar
@@ -226,8 +241,50 @@ jQuery(document).ready(function() {
         1300:{items:8, margin:15},
         1310:{items:8, margin:15}
         }
-    });      
+    });    
     
+    
+    // team
+    jQuery('.team').owlCarousel({
+        loop:true, 
+        autoWidth:false,       
+        margin:20,
+        dots:true,
+        navText:["<div class='arrow arrow_left'></div>","<div class='arrow arrow_right'></div>"],  
+        nav:true,
+        nav: false,
+        startPosition:1,
+        responsiveRefreshRate:1000,
+        responsive:{
+        0:{items:1, margin:0},
+        600:{items:1, margin:0}, 
+        738:{items:3},
+        1024:{items:3},
+        1300:{items:5},
+        1310:{items:5}
+        }
+    }); 
+    
+    // certificate
+    jQuery('.certificate').owlCarousel({
+        loop:true, 
+        autoWidth:false,       
+        margin:20,
+        dots:true,
+        navText:["<div class='arrow arrow_left'></div>","<div class='arrow arrow_right'></div>"],  
+        nav:true,
+        nav: false,
+        startPosition:1,
+        responsiveRefreshRate:1000,
+        responsive:{
+        0:{items:1, margin:0},
+        600:{items:1, margin:0}, 
+        738:{items:3},
+        1024:{items:3},
+        1300:{items:5},
+        1310:{items:5}
+        }
+    });  
     
     // block_item
     jQuery('.block_item').owlCarousel({
@@ -243,7 +300,7 @@ jQuery(document).ready(function() {
         responsive:{
         0:{items:1, margin:0},
         600:{items:1, margin:0}, 
-        800:{items:1},
+        800:{items:2},
         1024:{items:3},
         1300:{items:4},
         1310:{items:4}
@@ -265,7 +322,7 @@ jQuery(document).ready(function() {
         responsive:{
         0:{items:1, margin:0},
         600:{items:1, margin:0}, 
-        800:{items:1},
+        800:{items:2},
         1024:{items:3},
         1300:{items:3},
         1310:{items:3}
@@ -287,7 +344,7 @@ jQuery(document).ready(function() {
         responsive:{
         0:{items:1, margin:0},
         600:{items:1, margin:0}, 
-        800:{items:1},
+        800:{items:2},
         1024:{items:2},
         1300:{items:2},
         1310:{items:2}

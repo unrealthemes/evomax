@@ -6,7 +6,7 @@
 
 // Create id attribute allowing for custom "anchor" value.
 $id = 'about-' . $block['id'];
-$className = 'block_100';
+$className = 'about block_100';
 
 if ( !empty($block['anchor']) ) {
     $id = $block['anchor'];
@@ -23,6 +23,7 @@ if ( !empty($block['align']) ) {
 
 $img_id = get_field('img_id_about');
 $img_url = wp_get_attachment_url( $img_id, 'full' );
+$txt_vidget = get_field('txt_vidget_about');
 $title = get_field('title_about');
 $full_name = get_field('full_name_about');
 $position = get_field('position_about');
@@ -60,6 +61,12 @@ $txt = get_field('txt_about');
 
                         <div>
 
+                            <?php if ( $txt_vidget ) : ?>
+                                <div class="o_nas_block_l_name">
+                                    <?php echo $txt_vidget; ?>
+                                </div>
+                            <?php endif; ?>
+                            
                             <?php if ( $full_name ) : ?>
                                 <div class="o_nas_block_l_name">
                                     <?php echo nl2br($full_name); ?>
@@ -75,8 +82,7 @@ $txt = get_field('txt_about');
                             <?php if ( $txt_btn && $form ) : ?>
                                 <button type="button" class="btn_transparent open_popup" data-popup-id="<?php echo 'abt_' . $id; ?>" onclick="return false">
                                     <?php echo $txt_btn; ?>
-                                </a>
-                                <?php get_template_part('template-parts/modals/request', 'call', ['id' => 'abt_' . $id, 'form' => $form]); ?>
+                                </button>
                             <?php endif; ?>
 
                         </div>
@@ -90,9 +96,11 @@ $txt = get_field('txt_about');
                 <?php endif; ?>
 
             </div>    
-            
-                
         </div>
     </div>
+
+    <?php if ( $form ) : ?>
+        <?php get_template_part('template-parts/modals/request', 'call', ['id' => 'abt_' . $id, 'form' => $form]); ?>
+    <?php endif; ?>
 
 <?php endif; ?>

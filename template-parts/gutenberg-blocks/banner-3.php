@@ -42,7 +42,6 @@ $phone = get_field('phone_b3');
 
     <div id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?>"> 
         <div class="container">   
-            
             <div class="top_head top_head3">
                 <div class="container">
 
@@ -70,14 +69,13 @@ $phone = get_field('phone_b3');
 
                             <?php if ( $txt_btn && $form ) : ?>
                                 <div class="top_header_btn">
-                                    <button type="button" class="btn block_icon open_popup" data-popup-id="<?php echo $id; ?>" onclick="return false">
+                                    <button type="button" class="btn block_icon open_popup" data-popup-id="_<?php echo $id; ?>" onclick="return false">
                                         <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path fill-rule="evenodd" clip-rule="evenodd" d="M4 0.499773C4.493 0.499773 4.889 0.895777 4.889 1.38878C4.889 2.49578 5.067 3.56678 5.396 4.56178C5.493 4.86878 5.422 5.21978 5.178 5.46378L3.222 7.42978C4.502 9.94479 6.56 12.0028 9.08 13.2828L11.036 11.3228C11.28 11.0788 11.631 11.0078 11.938 11.1048C12.933 11.4348 14.004 11.6118 15.111 11.6118C15.604 11.6118 16 12.0078 16 12.5008V15.6118C16 16.1048 15.604 16.5008 15.111 16.5008C6.764 16.4998 0 9.73579 0 1.38878C0 0.895777 0.4 0.499773 0.889 0.499773H4ZM12.493 0.0927734L16.089 3.56578L8.734 7.58378L12.493 0.0927734Z" fill="white"/>
                                         </svg> 
                                         <span><?php echo esc_html($txt_btn); ?></span>
                                     </button>
                                 </div> 
-                                <?php get_template_part('template-parts/modals/request', 'call', ['id' => $id, 'form' => $form]); ?>
                             <?php endif; ?>
 
                             <div class="btn_text">
@@ -111,7 +109,6 @@ $phone = get_field('phone_b3');
                                 <?php endif; ?>
 
                             </div>
-
                         </div>
                     </div>
 
@@ -122,9 +119,12 @@ $phone = get_field('phone_b3');
                     <?php endif; ?>
 
                 </div>
-            </div>
-                
+            </div> 
         </div>
     </div>
+
+    <?php if ( $form ) : ?>
+        <?php get_template_part('template-parts/modals/request', 'call', ['id' => '_' . $id, 'form' => $form]); ?>
+    <?php endif; ?>
 
 <?php endif; ?>

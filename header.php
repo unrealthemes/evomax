@@ -61,7 +61,7 @@ $form = get_field('form_h', 'option'); // TO DO
                             </div>  
                             
                             
-                            <div class="deader_link">
+                            <!-- <div class="deader_link">
                                 <a href="#">
                                     <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M20.1671 3.7388H17.4171C16.4065 3.7388 15.5829 4.51884 15.5829 5.47759V16.2612H14.2079V8.95648C14.2079 7.99773 13.387 7.21769 12.375 7.21769H9.625C8.61438 7.21769 7.79212 7.99773 7.79212 8.95648V16.2612H6.41713V3.7388C6.41713 2.78005 5.59487 2 4.58287 2H1.83288C0.82225 2 0 2.78005 0 3.7388V17.1313C0 17.6113 0.411125 18 0.917125 18H21.0829C21.5889 18 22 17.6113 22 17.1313V5.47759C22 4.51884 21.1777 3.7388 20.1671 3.7388ZM1.83288 16.2612V3.7388H4.58287V16.2612H1.83288ZM9.625 16.2612V8.95648H12.375V16.2612H9.625ZM17.4171 16.2612V5.47759H20.1671V16.2612H17.4171Z" fill="#74B427"/>
@@ -74,7 +74,7 @@ $form = get_field('form_h', 'option'); // TO DO
                                     </svg> 
                                     <span>Избранное</span>
                                 </a>
-                            </div> 
+                            </div>  -->
                         </div>
                     </div>
                 </div>
@@ -139,10 +139,8 @@ $form = get_field('form_h', 'option'); // TO DO
 
                             </div>
 
-                            
-                            <!-- popup_btn --> 
                             <div class="popup_btn">
-                                <a href="#" class="open_popup btn_transparent" data-popup-id="popup1" onclick="return false">
+                                <a href="#" class="open_popup btn_transparent" data-popup-id="header_modal" onclick="return false">
                                     <svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <g clip-path="url(#clip0_204_3187)">
                                         	<path fill-rule="evenodd" clip-rule="evenodd" d="M4 0.499957C4.493 0.499957 4.889 0.89596 4.889 1.38896C4.889 2.49596 5.067 3.56696 5.396 4.56196C5.493 4.86896 5.422 5.21996 5.178 5.46396L3.222 7.42996C4.502 9.94497 6.56 12.003 9.08 13.283L11.036 11.323C11.28 11.079 11.631 11.008 11.938 11.105C12.933 11.435 14.004 11.612 15.111 11.612C15.604 11.612 16 12.008 16 12.501V15.612C16 16.105 15.604 16.501 15.111 16.501C6.764 16.5 0 9.73597 0 1.38896C0 0.89596 0.4 0.499957 0.889 0.499957H4ZM12.493 0.0929565L16.089 3.56596L8.734 7.58396L12.493 0.0929565Z" fill="url(#paint0_linear_204_3187)"/>
@@ -160,12 +158,13 @@ $form = get_field('form_h', 'option'); // TO DO
                                     <span>Заказать звонок</span>
                                 </a>
                             </div>
+
                         </div>
                           
                         <div class="header_r_r w33">
                            <div class="header_r_r_text">Нужна быстрая оценка стоимости?</div>
                            <div class="header_r_r_btn">
-                                <a href="#" class="btn_transparent popup_btn">
+                                <a href="#" class="open_popup btn_transparent popup_btn" data-popup-id="calc_modal" onclick="return false">
                                     <svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<g clip-path="url(#clip0_24_956)">
 											<path d="M13 0H1C0.449 0 0 0.449 0 1V15C0 15.552 0.449 16 1 16H13C13.552 16 14 15.552 14 15V1C14 0.449 13.552 0 13 0ZM4 14H2V12H4V14ZM4 10H2V8H4V10ZM8 14H6V12H8V14ZM8 10H6V8H8V10ZM12 14H10V8H12V14ZM12 5.5C12 5.77601 11.776 6 11.5 6H2.5C2.22399 6 2 5.77601 2 5.5V2.5C2 2.22399 2.22399 2 2.5 2H11.5C11.776 2 12 2.22399 12 2.5V5.5Z" fill="url(#paint0_linear_24_956)"/>
@@ -432,3 +431,25 @@ $form = get_field('form_h', 'option'); // TO DO
     </header>
 
     <main> 
+
+    <?php 
+    get_template_part(
+        'template-parts/modals/request', 
+        'call', 
+        [
+            'id' => 'header_modal', 
+            'form' => $form
+        ]
+    ); 
+    ?>
+
+    <?php 
+    get_template_part(
+        'template-parts/modals/request', 
+        'call', 
+        [
+            'id' => 'calc_modal', 
+            'form' => $form
+        ]
+    ); 
+    ?>

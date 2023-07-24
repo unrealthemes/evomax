@@ -652,7 +652,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -676,7 +676,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -691,16 +691,40 @@
             "ui": 1
         },
         {
-            "key": "field_64b822add818e",
-            "label": "Выбор формы (поделиться товаром)",
-            "name": "product_share_form_prp",
+            "key": "field_64b9386430d79",
+            "label": "Выбор формы (заказать с установкой)",
+            "name": "product_order_install_form_prp",
             "aria-label": "",
             "type": "post_object",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "wpcf7_contact_form"
+            ],
+            "post_status": "",
+            "taxonomy": "",
+            "return_format": "object",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 1
+        },
+        {
+            "key": "field_64b9388330d7a",
+            "label": "Выбор формы (заказать в один клик)",
+            "name": "product_order_click_form_prp",
+            "aria-label": "",
+            "type": "post_object",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -733,5 +757,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1689789139
+    "modified": 1689860304
 }

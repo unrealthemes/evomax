@@ -39,7 +39,7 @@ $turnkey_installation = get_post_meta( $product->get_id(), '_turnkey_installatio
     <div class="dostavka_info block_icon">
         <img src="<?php echo THEME_URI; ?>/img/dostavka_info.svg" width="40px" alt="" />
         <div>
-            Доставим и установим ориентировочно <span>5 июня</span>
+            Доставим и установим ориентировочно <span><?php echo wp_date('d F', strtotime(date() . '+ 1 days')); ?></span>
         </div>
     </div>
     
