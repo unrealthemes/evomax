@@ -236,6 +236,42 @@ class UT_Guneberg_Blocks {
             ]);
             
             acf_register_block_type([
+                'name'              => 'banner-5',
+                'title'             => 'Банер 5',
+                // 'description'       => __('A custom description.'),
+                'render_template'   => 'template-parts/gutenberg-blocks/banner-5.php',
+                'category'          => 'evomax',
+                'icon'              => 'evomax_icon',
+                'keywords'          => [ 'Банер' ],
+                'example'           => [
+                    'attributes' => [
+                        'mode' => 'preview',
+                        'data' => [
+                            'is_preview' => true
+                        ]
+                    ]
+                ]
+            ]);
+            
+            acf_register_block_type([
+                'name'              => 'steps',
+                'title'             => 'Шаги',
+                // 'description'       => __('A custom description.'),
+                'render_template'   => 'template-parts/gutenberg-blocks/steps.php',
+                'category'          => 'evomax',
+                'icon'              => 'evomax_icon',
+                'keywords'          => [ 'Шаги' ],
+                'example'           => [
+                    'attributes' => [
+                        'mode' => 'preview',
+                        'data' => [
+                            'is_preview' => true
+                        ]
+                    ]
+                ]
+            ]);
+            
+            acf_register_block_type([
                 'name'              => 'blocks-1',
                 'title'             => 'Блоки 1',
                 // 'description'       => __('A custom description.'),

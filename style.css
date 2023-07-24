@@ -343,3 +343,14 @@ ul.page-numbers li {
         grid-template-columns: 1fr;
     }
 }
+
+.style-list ul li {
+    font-weight: 500;
+    font-size: 17px;
+    background: url(img/li.svg) no-repeat center left;
+    padding: 11px 5px 5px 35px;
+}
+
+.block_qestions_vn button {
+    width: 100%;
+}
