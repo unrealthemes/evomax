@@ -354,3 +354,23 @@ ul.page-numbers li {
 .block_qestions_vn button {
     width: 100%;
 }
+
+.video_list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.video_list-item {
+    flex: 50%;
+    padding: 10px;
+}
+
+.video_list-item iframe {
+    width: 100%;
+}
+
+@media only screen and (max-width: 770px) {
+    .video_list-item {
+        flex: 100%;
+    }
+}

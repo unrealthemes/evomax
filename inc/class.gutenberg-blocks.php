@@ -272,6 +272,24 @@ class UT_Guneberg_Blocks {
             ]);
             
             acf_register_block_type([
+                'name'              => 'work',
+                'title'             => 'Табы',
+                // 'description'       => __('A custom description.'),
+                'render_template'   => 'template-parts/gutenberg-blocks/work.php',
+                'category'          => 'evomax',
+                'icon'              => 'evomax_icon',
+                'keywords'          => [ 'Табы' ],
+                'example'           => [
+                    'attributes' => [
+                        'mode' => 'preview',
+                        'data' => [
+                            'is_preview' => true
+                        ]
+                    ]
+                ]
+            ]);
+            
+            acf_register_block_type([
                 'name'              => 'blocks-1',
                 'title'             => 'Блоки 1',
                 // 'description'       => __('A custom description.'),
