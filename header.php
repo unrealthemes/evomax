@@ -300,7 +300,7 @@ $form = get_field('form_h', 'option'); // TO DO
                                 </div>
                             </div>
                             
-                            <div class="di_menu_text">
+                            <!-- <div class="di_menu_text">
                                 <span>Услуги</span>
                                 <svg width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M12 1.5L6.5 6.5L1 1.5" stroke="white" stroke-width="2"/>
@@ -365,7 +365,7 @@ $form = get_field('form_h', 'option'); // TO DO
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                         </div> 
                     
                         <!-- header menu 2 --> 

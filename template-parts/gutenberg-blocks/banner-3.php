@@ -23,6 +23,8 @@ if ( !empty($block['align']) ) {
 
 $img_id = get_field('bg_img_b3');
 $img_url = wp_get_attachment_url( $img_id, 'full' );
+$full_name = get_field('full_name_b3');
+$position = get_field('position_b3');
 $title = get_field('title_b3');
 $txt = get_field('txt_b3');
 $blocks = get_field('blocks_b3');
@@ -116,6 +118,13 @@ $phone = get_field('phone_b3');
                         <div class="top_head_img">
                             <img src="<?php echo esc_attr($img_url); ?>" alt="Phone image">
                         </div> 
+                    <?php endif; ?>
+
+                    <?php if ( $full_name || $position ) : ?>
+                        <div class="top_head20_block">
+                            <strong><?php echo esc_html($full_name); ?></strong>
+                            <?php echo esc_html($position); ?>
+                        </div>
                     <?php endif; ?>
 
                 </div>

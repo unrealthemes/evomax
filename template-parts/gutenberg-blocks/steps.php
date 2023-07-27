@@ -21,6 +21,12 @@ if ( !empty($block['align']) ) {
     $className .= ' align' . $block['align'];
 }
 
+$title_t1 = get_field('title_t1_steps');
+$txt_t1 = get_field('txt_t1_steps');
+$table_t1 = get_field('table_t1_steps');
+$txt_btn_t1 = get_field('txt_btn_t1_steps');
+$form_t1 = get_field('form_t1_steps');
+
 $title = get_field('title_steps');
 $steps = get_field('_steps');
 
@@ -39,6 +45,9 @@ $title_v = get_field('title_v_steps');
 $txt_v = get_field('txt_v_steps');
 $txt_btn_v = get_field('txt_btn_v_steps');
 $form_v = get_field('form_v_steps');
+
+$title_faqs = get_field('title_faqs_v_steps');
+$faqs = get_field('faqs_v_steps');
 ?>
 
 <?php if ( !empty( $_POST['query']['preview'] ) ) : ?>
@@ -52,13 +61,33 @@ $form_v = get_field('form_v_steps');
     <div id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?>"> 
         <div class="container">
             <div class="block_content">
-
-                <?php if ( $title ) : ?>
-                    <h3><?php echo esc_html($title); ?></h3>
-                <?php endif; ?>
     
                 <div class="block_steep3">
                     <div class="block_steep3_l">
+
+                        <div class="table2 block_b_100">
+                            <div class="title_table">
+                                
+                                <?php if ( $title_t1 ) : ?>
+                                    <h3><?php echo esc_html($title_t1); ?></h3>
+                                <?php endif; ?>
+
+                                <?php echo nl2br($txt_t1); ?>
+                            </div>
+                            
+                            <?php echo $table_t1; ?>
+
+                            <?php if ( $txt_btn_t1 ) : ?>
+                                <button type="button" class="btn open_popup" data-popup-id="_t1_<?php echo $id; ?>" onclick="return false">
+                                    <?php echo esc_html($txt_btn_t1); ?>
+                                </button>
+                            <?php endif; ?>
+
+                        </div> 
+
+                        <?php if ( $title ) : ?>
+                            <h3><?php echo esc_html($title); ?></h3>
+                        <?php endif; ?>
 
                         <?php if ( $steps ) : ?>
                             <ol>
@@ -79,25 +108,28 @@ $form_v = get_field('form_v_steps');
                             </ol>
                         <?php endif; ?>
                         
-                        <div class="table2 block_100">
-                            <div class="title_table">
+                        <?php if ( $table_t ) : ?>
+                            <div class="table2 block_100">
+                                <div class="title_table">
+                                    
+                                    <?php if ( $title_t ) : ?>
+                                        <h3><?php echo esc_html($title_t); ?></h3>
+                                    <?php endif; ?>
+
+                                    <?php echo nl2br($txt_t); ?>
+                                </div>
                                 
-                                <?php if ( $title_t ) : ?>
-                                    <h3><?php echo esc_html($title_t); ?></h3>
+                                <?php echo $table_t; ?>
+
+                                <?php if ( $txt_btn_t ) : ?>
+                                    <button type="button" class="btn open_popup" data-popup-id="_t_<?php echo $id; ?>" onclick="return false">
+                                        <?php echo esc_html($txt_btn_t); ?>
+                                    </button>
                                 <?php endif; ?>
 
-                                <?php echo nl2br($txt_t); ?>
-                            </div>
-                            
-                            <?php echo $table_t; ?>
+                            </div> 
+                        <?php endif; ?>
 
-                            <?php if ( $txt_btn_t ) : ?>
-                                <button type="button" class="btn open_popup" data-popup-id="_t_<?php echo $id; ?>" onclick="return false">
-                                    <?php echo esc_html($txt_btn_t); ?>
-                                </button>
-                            <?php endif; ?>
-
-                        </div> 
                         <div class="block_100">
 
                             <?php if ( $title_l ) : ?>
@@ -111,6 +143,32 @@ $form_v = get_field('form_v_steps');
                             <?php endif; ?>
 
                         </div> 
+
+                        <?php if ( $title_faqs ) : ?>
+                            <h3><?php echo esc_html($title_faqs); ?></h3>
+                        <?php endif; ?>
+
+                        <?php if ($faqs) : ?>
+                            <div class="faq_vn">  
+                                <div id="accordion-js">
+
+                                    <?php foreach ($faqs as $faq) : ?>
+
+                                        <div class="item">
+                                            <div class="heading">
+                                                <?php echo nl2br($faq['question_faqs_v_steps']); ?>
+                                            </div>
+                                            <div class="content">
+                                                <?php echo nl2br($faq['answer_faqs_v_steps']); ?>
+                                            </div>
+                                        </div>
+
+                                    <?php endforeach; ?>
+
+                                </div> 
+                            </div> 
+                        <?php endif; ?>
+
                     </div>       
                     <div class="block_qestions white">
                         <div class="block_qestions_vn fon_gradient">    
@@ -140,6 +198,10 @@ $form_v = get_field('form_v_steps');
         </div>
     </div> 
 
+    <?php if ( $form_t1 ) : ?>
+        <?php get_template_part('template-parts/modals/request-call', null, ['id' => '_t1_' . $id, 'form' => $form_t1]); ?>
+    <?php endif; ?>
+    
     <?php if ( $form_t ) : ?>
         <?php get_template_part('template-parts/modals/request-call', null, ['id' => '_t_' . $id, 'form' => $form_t]); ?>
     <?php endif; ?>
