@@ -1,11 +1,11 @@
 {
-    "key": "group_64ac093d805f3",
-    "title": "О нас",
+    "key": "group_64c0d4f4d9261",
+    "title": "Таблица",
     "fields": [
         {
-            "key": "field_64ac093ec49e4",
+            "key": "field_64c0d4f5bcb12",
             "label": "Заглавие",
-            "name": "title_about",
+            "name": "title_table",
             "aria-label": "",
             "type": "text",
             "instructions": "",
@@ -23,54 +23,9 @@
             "append": ""
         },
         {
-            "key": "field_64ac09e5c49e5",
-            "label": "Изображение",
-            "name": "img_id_about",
-            "aria-label": "",
-            "type": "image",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "id",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": "",
-            "preview_size": "medium"
-        },
-        {
-            "key": "field_64be3ce9a6ce4",
-            "label": "Текст виджета",
-            "name": "txt_vidget_about",
-            "aria-label": "",
-            "type": "wysiwyg",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "tabs": "all",
-            "toolbar": "full",
-            "media_upload": 0,
-            "delay": 0
-        },
-        {
-            "key": "field_64ac0a0bc49e6",
-            "label": "ФИО",
-            "name": "full_name_about",
+            "key": "field_64c0d52dbcb13",
+            "label": "Описание",
+            "name": "desc_table",
             "aria-label": "",
             "type": "textarea",
             "instructions": "",
@@ -88,11 +43,31 @@
             "new_lines": ""
         },
         {
-            "key": "field_64ac0a30c49e7",
-            "label": "Должность",
-            "name": "position_about",
+            "key": "field_64c0d53ebcb14",
+            "label": "Таблица",
+            "name": "table_table",
             "aria-label": "",
-            "type": "text",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_64c38551389ba",
+            "label": "Информация",
+            "name": "info_table",
+            "aria-label": "",
+            "type": "textarea",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -103,14 +78,14 @@
             },
             "default_value": "",
             "maxlength": "",
+            "rows": "",
             "placeholder": "",
-            "prepend": "",
-            "append": ""
+            "new_lines": ""
         },
         {
-            "key": "field_64ac0a55c49e8",
+            "key": "field_64c3892d02e16",
             "label": "Текст кнопки",
-            "name": "txt_btn_about",
+            "name": "txt_btn_table",
             "aria-label": "",
             "type": "text",
             "instructions": "",
@@ -128,9 +103,9 @@
             "append": ""
         },
         {
-            "key": "field_64ac0a75c49e9",
+            "key": "field_64c3894d02e17",
             "label": "Выбор формы",
-            "name": "form_about",
+            "name": "form_table",
             "aria-label": "",
             "type": "post_object",
             "instructions": "",
@@ -150,26 +125,6 @@
             "multiple": 0,
             "allow_null": 0,
             "ui": 1
-        },
-        {
-            "key": "field_64ac0aa0c49ea",
-            "label": "Основной текст",
-            "name": "txt_about",
-            "aria-label": "",
-            "type": "wysiwyg",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "tabs": "all",
-            "toolbar": "full",
-            "media_upload": 1,
-            "delay": 0
         }
     ],
     "location": [
@@ -177,7 +132,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/about"
+                "value": "acf\/table"
             }
         ]
     ],
@@ -190,5 +145,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1690189084
+    "modified": 1690536311
 }

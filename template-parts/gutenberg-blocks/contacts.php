@@ -118,11 +118,10 @@ $desc = get_field('desc_contacts');
 
                                 <?php if ($txt_btn && $form) : ?>
                                     <div class="footer_btn">
-                                        <button type="button" class="btn open_popup" data-popup-id="<?php echo $id; ?>" onclick="return false">
+                                        <button type="button" class="btn open_popup" data-popup-id="_<?php echo $id; ?>" onclick="return false">
                                             <?php echo esc_html($txt_btn); ?>
                                         </button>
                                     </div>
-                                    <?php get_template_part('template-parts/modals/request', 'call', ['id' => $id, 'form' => $form]); ?>
                                 <?php endif; ?>
 
                                 <?php if ($mail) : ?>
@@ -178,5 +177,9 @@ $desc = get_field('desc_contacts');
             </div>
         </div>
     </div>
+
+    <?php if ($form) : ?>
+        <?php get_template_part('template-parts/modals/request', 'call', ['id' => '_' . $id, 'form' => $form]); ?>
+    <?php endif; ?>
 
 <?php endif; ?>

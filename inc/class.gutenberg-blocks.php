@@ -38,6 +38,132 @@ class UT_Guneberg_Blocks {
         if ( function_exists('acf_register_block_type') ) {
     
             acf_register_block_type([
+                'name'              => 'breadcrumbs',
+                'title'             => 'Breadcrumbs',
+                // 'description'       => __('A custom description.'),
+                'render_template'   => 'template-parts/gutenberg-blocks/breadcrumbs.php',
+                'category'          => 'evomax',
+                'icon'              => 'evomax_icon',
+                'keywords'          => [ 'Breadcrumbs' ],
+                'example'           => [
+                    'attributes' => [
+                        'mode' => 'preview',
+                        'data' => [
+                            'is_preview' => true
+                        ]
+                    ]
+                ]
+            ]);
+            
+            acf_register_block_type([
+                'name'              => 'title',
+                'title'             => 'Заглавие',
+                // 'description'       => __('A custom description.'),
+                'render_template'   => 'template-parts/gutenberg-blocks/title.php',
+                'category'          => 'evomax',
+                'icon'              => 'evomax_icon',
+                'keywords'          => [ 'Заглавие' ],
+                'example'           => [
+                    'attributes' => [
+                        'mode' => 'preview',
+                        'data' => [
+                            'is_preview' => true
+                        ]
+                    ]
+                ]
+            ]);
+            
+            acf_register_block_type([
+                'name'              => 'text',
+                'title'             => 'Текст',
+                // 'description'       => __('A custom description.'),
+                'render_template'   => 'template-parts/gutenberg-blocks/text.php',
+                'category'          => 'evomax',
+                'icon'              => 'evomax_icon',
+                'keywords'          => [ 'Текст' ],
+                'example'           => [
+                    'attributes' => [
+                        'mode' => 'preview',
+                        'data' => [
+                            'is_preview' => true
+                        ]
+                    ]
+                ]
+            ]);
+            
+            acf_register_block_type([
+                'name'              => 'team',
+                'title'             => 'Команда',
+                // 'description'       => __('A custom description.'),
+                'render_template'   => 'template-parts/gutenberg-blocks/team.php',
+                'category'          => 'evomax',
+                'icon'              => 'evomax_icon',
+                'keywords'          => [ 'Команда' ],
+                'example'           => [
+                    'attributes' => [
+                        'mode' => 'preview',
+                        'data' => [
+                            'is_preview' => true
+                        ]
+                    ]
+                ]
+            ]);
+            
+            acf_register_block_type([
+                'name'              => 'certificates',
+                'title'             => 'Сертификаты',
+                // 'description'       => __('A custom description.'),
+                'render_template'   => 'template-parts/gutenberg-blocks/certificates.php',
+                'category'          => 'evomax',
+                'icon'              => 'evomax_icon',
+                'keywords'          => [ 'Сертификаты' ],
+                'example'           => [
+                    'attributes' => [
+                        'mode' => 'preview',
+                        'data' => [
+                            'is_preview' => true
+                        ]
+                    ]
+                ]
+            ]);
+            
+            acf_register_block_type([
+                'name'              => 'col2',
+                'title'             => '2 колонки',
+                // 'description'       => __('A custom description.'),
+                'render_template'   => 'template-parts/gutenberg-blocks/col2.php',
+                'category'          => 'evomax',
+                'icon'              => 'evomax_icon',
+                'keywords'          => [ '2 колонки' ],
+                'example'           => [
+                    'attributes' => [
+                        'mode' => 'preview',
+                        'data' => [
+                            'is_preview' => true
+                        ]
+                    ]
+                ]
+            ]);
+            
+            acf_register_block_type([
+                'name'              => 'cities',
+                'title'             => 'Города',
+                // 'description'       => __('A custom description.'),
+                'render_template'   => 'template-parts/gutenberg-blocks/cities.php',
+                'category'          => 'evomax',
+                'icon'              => 'evomax_icon',
+                'keywords'          => [ 'Города' ],
+                'example'           => [
+                    'attributes' => [
+                        'mode' => 'preview',
+                        'data' => [
+                            'is_preview' => true
+                        ]
+                    ]
+                ]
+            ]);
+            
+            acf_register_block_type([
                 'name'              => 'banner',
                 'title'             => 'Банер',
                 // 'description'       => __('A custom description.'),
@@ -81,6 +207,78 @@ class UT_Guneberg_Blocks {
                 'category'          => 'evomax',
                 'icon'              => 'evomax_icon',
                 'keywords'          => [ 'Банер' ],
+                'example'           => [
+                    'attributes' => [
+                        'mode' => 'preview',
+                        'data' => [
+                            'is_preview' => true
+                        ]
+                    ]
+                ]
+            ]);
+            
+            acf_register_block_type([
+                'name'              => 'banner-4',
+                'title'             => 'Банер 4',
+                // 'description'       => __('A custom description.'),
+                'render_template'   => 'template-parts/gutenberg-blocks/banner-4.php',
+                'category'          => 'evomax',
+                'icon'              => 'evomax_icon',
+                'keywords'          => [ 'Банер' ],
+                'example'           => [
+                    'attributes' => [
+                        'mode' => 'preview',
+                        'data' => [
+                            'is_preview' => true
+                        ]
+                    ]
+                ]
+            ]);
+            
+            acf_register_block_type([
+                'name'              => 'banner-5',
+                'title'             => 'Банер 5',
+                // 'description'       => __('A custom description.'),
+                'render_template'   => 'template-parts/gutenberg-blocks/banner-5.php',
+                'category'          => 'evomax',
+                'icon'              => 'evomax_icon',
+                'keywords'          => [ 'Банер' ],
+                'example'           => [
+                    'attributes' => [
+                        'mode' => 'preview',
+                        'data' => [
+                            'is_preview' => true
+                        ]
+                    ]
+                ]
+            ]);
+            
+            acf_register_block_type([
+                'name'              => 'steps',
+                'title'             => 'Шаги',
+                // 'description'       => __('A custom description.'),
+                'render_template'   => 'template-parts/gutenberg-blocks/steps.php',
+                'category'          => 'evomax',
+                'icon'              => 'evomax_icon',
+                'keywords'          => [ 'Шаги' ],
+                'example'           => [
+                    'attributes' => [
+                        'mode' => 'preview',
+                        'data' => [
+                            'is_preview' => true
+                        ]
+                    ]
+                ]
+            ]);
+            
+            acf_register_block_type([
+                'name'              => 'work',
+                'title'             => 'Табы',
+                // 'description'       => __('A custom description.'),
+                'render_template'   => 'template-parts/gutenberg-blocks/work.php',
+                'category'          => 'evomax',
+                'icon'              => 'evomax_icon',
+                'keywords'          => [ 'Табы' ],
                 'example'           => [
                     'attributes' => [
                         'mode' => 'preview',
@@ -153,6 +351,132 @@ class UT_Guneberg_Blocks {
                 'category'          => 'evomax',
                 'icon'              => 'evomax_icon',
                 'keywords'          => [ 'Блоки' ],
+                'example'           => [
+                    'attributes' => [
+                        'mode' => 'preview',
+                        'data' => [
+                            'is_preview' => true
+                        ]
+                    ]
+                ]
+            ]);
+            
+            acf_register_block_type([
+                'name'              => 'blocks-5',
+                'title'             => 'Блоки 5',
+                // 'description'       => __('A custom description.'),
+                'render_template'   => 'template-parts/gutenberg-blocks/blocks-5.php',
+                'category'          => 'evomax',
+                'icon'              => 'evomax_icon',
+                'keywords'          => [ 'Блоки' ],
+                'example'           => [
+                    'attributes' => [
+                        'mode' => 'preview',
+                        'data' => [
+                            'is_preview' => true
+                        ]
+                    ]
+                ]
+            ]);
+            
+            acf_register_block_type([
+                'name'              => 'blocks-6',
+                'title'             => 'Блоки 6',
+                // 'description'       => __('A custom description.'),
+                'render_template'   => 'template-parts/gutenberg-blocks/blocks-6.php',
+                'category'          => 'evomax',
+                'icon'              => 'evomax_icon',
+                'keywords'          => [ 'Блоки' ],
+                'example'           => [
+                    'attributes' => [
+                        'mode' => 'preview',
+                        'data' => [
+                            'is_preview' => true
+                        ]
+                    ]
+                ]
+            ]);
+            
+            acf_register_block_type([
+                'name'              => 'blocks-7',
+                'title'             => 'Блоки 7',
+                // 'description'       => __('A custom description.'),
+                'render_template'   => 'template-parts/gutenberg-blocks/blocks-7.php',
+                'category'          => 'evomax',
+                'icon'              => 'evomax_icon',
+                'keywords'          => [ 'Блоки' ],
+                'example'           => [
+                    'attributes' => [
+                        'mode' => 'preview',
+                        'data' => [
+                            'is_preview' => true
+                        ]
+                    ]
+                ]
+            ]);
+            
+            acf_register_block_type([
+                'name'              => 'blocks-8',
+                'title'             => 'Блоки 8',
+                // 'description'       => __('A custom description.'),
+                'render_template'   => 'template-parts/gutenberg-blocks/blocks-8.php',
+                'category'          => 'evomax',
+                'icon'              => 'evomax_icon',
+                'keywords'          => [ 'Блоки' ],
+                'example'           => [
+                    'attributes' => [
+                        'mode' => 'preview',
+                        'data' => [
+                            'is_preview' => true
+                        ]
+                    ]
+                ]
+            ]);
+            
+            acf_register_block_type([
+                'name'              => 'blocks-9',
+                'title'             => 'Блоки 9',
+                // 'description'       => __('A custom description.'),
+                'render_template'   => 'template-parts/gutenberg-blocks/blocks-9.php',
+                'category'          => 'evomax',
+                'icon'              => 'evomax_icon',
+                'keywords'          => [ 'Блоки' ],
+                'example'           => [
+                    'attributes' => [
+                        'mode' => 'preview',
+                        'data' => [
+                            'is_preview' => true
+                        ]
+                    ]
+                ]
+            ]);
+            
+            acf_register_block_type([
+                'name'              => 'table',
+                'title'             => 'Таблица',
+                // 'description'       => __('A custom description.'),
+                'render_template'   => 'template-parts/gutenberg-blocks/table.php',
+                'category'          => 'evomax',
+                'icon'              => 'evomax_icon',
+                'keywords'          => [ 'Таблица' ],
+                'example'           => [
+                    'attributes' => [
+                        'mode' => 'preview',
+                        'data' => [
+                            'is_preview' => true
+                        ]
+                    ]
+                ]
+            ]);
+            
+            acf_register_block_type([
+                'name'              => 'info',
+                'title'             => 'Информационный блок',
+                // 'description'       => __('A custom description.'),
+                'render_template'   => 'template-parts/gutenberg-blocks/info.php',
+                'category'          => 'evomax',
+                'icon'              => 'evomax_icon',
+                'keywords'          => [ 'Информационный', 'блок' ],
                 'example'           => [
                     'attributes' => [
                         'mode' => 'preview',

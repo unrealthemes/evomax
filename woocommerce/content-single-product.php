@@ -25,7 +25,6 @@ $blocks = get_field( 'blocks_prp', 'option' );
 $product_blocks_page = get_field( 'product_blocks_prp', 'option' );
 $found_cheaper_form = get_field( 'found_cheaper_form_prp', 'option' );
 $product_order_form = get_field( 'product_order_form_prp', 'option' );
-$product_share_form = get_field( 'product_share_form_prp', 'option' );
 
 /**
  * Hook: woocommerce_before_single_product.
@@ -101,7 +100,7 @@ $product_share_form = get_field( 'product_share_form_prp', 'option' );
                                     <!-- <a href="#" class="limg_icon_wishlist">
                                         <img src="<?php echo THEME_URI; ?>/img/label_wishlist.svg" alt="">
                                     </a>  -->
-                                    <a href="#" class="img_icon_share">
+                                    <a href="#" class="img_icon_share open_popup" data-popup-id="product_share" onclick="return false">
                                         <img src="<?php echo THEME_URI; ?>/img/share.svg" alt="Share">
                                     </a>
                                 </div>
@@ -171,12 +170,7 @@ $product_share_form = get_field( 'product_share_form_prp', 'option' );
 
     <?php 
     get_template_part(
-        'template-parts/modals/request-call', 
-        null, 
-        [
-            'id' => 'product_share', 
-            'form' => $product_share_form
-        ]
+        'template-parts/modals/share', 
     ); 
     ?>
     

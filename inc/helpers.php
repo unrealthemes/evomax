@@ -279,3 +279,21 @@ function ut_custom_login_url( $url ) {
     return home_url();
 }
 add_filter( 'login_headerurl', 'ut_custom_login_url' );
+
+
+
+function ut_menu_hierarhy_items($menu_items) {
+
+	$items_hierarhy = [];
+	foreach ( $menu_items as $menu_item ) {
+
+		if ( $menu_item->menu_item_parent == 0 ) {
+			$items_hierarhy[ $menu_item->ID ]['label'] = $menu_item->title;
+			$items_hierarhy[ $menu_item->ID ]['url'] = $menu_item->url;
+		} else {
+			$items_hierarhy[ $menu_item->menu_item_parent ]['items'][ $menu_item->ID ] = $menu_item;
+		}
+	}
+
+	return $items_hierarhy;
+}

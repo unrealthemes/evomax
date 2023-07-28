@@ -20,9 +20,6 @@ if ( !empty($block['className']) ) {
 if ( !empty($block['align']) ) {
     $className .= ' align' . $block['align'];
 }
-
-$form = get_field('form_cf');
-$contact_form = WPCF7_ContactForm::get_instance( $form->ID );
 ?>
 
 <?php if ( !empty( $_POST['query']['preview'] ) ) : ?>
@@ -32,6 +29,11 @@ $contact_form = WPCF7_ContactForm::get_instance( $form->ID );
     </figure>
 
 <?php else : ?>
+
+    <?php 
+    $form = get_field('form_cf');
+    $contact_form = WPCF7_ContactForm::get_instance( $form->ID );
+    ?>
 
     <div id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?>"> 
         <div class="container">   

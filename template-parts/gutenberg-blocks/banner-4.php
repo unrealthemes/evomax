@@ -1,12 +1,12 @@
 <?php
 
 /**
- * banner Block Template.
+ * banner-4 Block Template.
  */
 
 // Create id attribute allowing for custom "anchor" value.
-$id = 'banner-' . $block['id'];
-$className = '';
+$id = 'banner-4-' . $block['id'];
+$className = 'banner-4';
 
 if ( !empty($block['anchor']) ) {
     $id = $block['anchor'];
@@ -21,20 +21,18 @@ if ( !empty($block['align']) ) {
     $className .= ' align' . $block['align'];
 }
 
-$bg_img_id = get_field('bg_img_b');
+$bg_img_id = get_field('bg_img_b4');
 $bg_url = wp_get_attachment_url( $bg_img_id, 'full' );
-$title = get_field('title_b');
-$desc = get_field('desc_b');
-$txt_btn = get_field('txt_btn_b');
-$form = get_field('form_b');
-$title_b = get_field('title_b_b');
-$brands_b = get_field('brands_b_b');
+$title = get_field('title_b4');
+$desc = get_field('desc_b4');
+$txt_btn = get_field('txt_btn_b4');
+$form = get_field('form_b4');
 ?>
 
 <?php if ( !empty( $_POST['query']['preview'] ) ) : ?>
 
     <figure>
-        <img src="<?php echo THEME_URI; ?>/img/gutenberg-preview/banner.png" alt="Preview" style="width:100%;">
+        <img src="<?php echo THEME_URI; ?>/img/gutenberg-preview/banner-4.png" alt="Preview" style="width:100%;">
     </figure>
 
 <?php else : ?>
@@ -42,6 +40,8 @@ $brands_b = get_field('brands_b_b');
     <div id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?>"> 
         <div class="top_head">
             <div class="container">
+
+                <?php do_action( 'echo_kama_breadcrumbs' ); ?>
 
                 <?php if ( $title ) : ?>
                     <h1><?php echo nl2br($title); ?></h1> 
@@ -68,30 +68,6 @@ $brands_b = get_field('brands_b_b');
                     </div>
                 <?php endif; ?>
                 
-            </div>
-        </div>
-        <div class="block_slider">
-            <div class="container">
-
-                <?php if ( $title_b ) : ?>
-                    <h5><?php echo esc_html($title_b); ?></h5> 
-                <?php endif; ?>
-
-                <?php if ( $brands_b ) : ?>
-                    <div class="block_slider_tag owl-carousel owl-theme">
-
-                        <?php foreach ( $brands_b as $brand ) : ?>
-                            <div class="item">
-                                <a href="<?php echo esc_url( get_term_link($brand->slug, $brand->taxonomy) ); ?>">
-                                    <?php echo $brand->name; ?> 
-                                    <span>(<?php echo $brand->count; ?>)</span>
-                                </a>
-                            </div> 
-                        <?php endforeach; ?>
-
-                    </div> 
-                <?php endif; ?>
-
             </div>
         </div>
     </div>
