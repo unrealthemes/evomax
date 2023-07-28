@@ -84,17 +84,19 @@ $form = get_field('form_faq');
                         <?php endif; ?>
 
                         <?php if ( $txt_btn && $form ) : ?>
-                            <button type="button" class="btn_white open_popup" data-popup-id="<?php echo $id; ?>" onclick="return false">
+                            <button type="button" class="btn_white open_popup" data-popup-id="_<?php echo $id; ?>" onclick="return false">
                                 <?php echo esc_html($txt_btn); ?>
                             </button>
-                            <?php get_template_part('template-parts/modals/request', 'call', ['id' => $id, 'form' => $form]); ?>
                         <?php endif; ?>
 
                     </div>
                 </div> 
             </div>
- 
         </div>
     </div>
+
+    <?php if ( $form ) : ?>
+        <?php get_template_part('template-parts/modals/request', 'call', ['id' => '_' . $id, 'form' => $form]); ?>
+    <?php endif; ?>
 
 <?php endif; ?>

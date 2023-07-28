@@ -32,7 +32,8 @@ $salvo_drop = get_post_meta( $product->get_id(), '_salvo_drop', true );
 $turnkey_installation = get_post_meta( $product->get_id(), '_turnkey_installation', true );
 $novelty = get_post_meta( $product->get_id(), '_novelty', true );
 $promotion = get_post_meta( $product->get_id(), '_promotion', true );
-
+$product_order_install_form = get_field( 'product_order_install_form_prp', 'option' );
+$product_order_click_form = get_field( 'product_order_click_form_prp', 'option' );
 ?>
 
 <div <?php wc_product_class( 'item object_item', $product ); ?> > 
@@ -46,13 +47,13 @@ $promotion = get_post_meta( $product->get_id(), '_promotion', true );
             <div class="label_sale">Акция</div>
         <?php endif; ?>
         
-        <a href="#" class="label_compare">
-            <img src="<?php echo THEME_URI; ?>/img/label_compare.svg" alt="compare"> 
-        </a>
+        <!-- <a href="#" class="label_compare">
+            <img src="<?php // echo THEME_URI; ?>/img/label_compare.svg" alt="compare"> 
+        </a> -->
         
-        <a href="#" class="label_wishlist">
-            <img src="<?php echo THEME_URI; ?>/img/label_wishlist.svg" alt="wishlist">
-        </a> 
+        <!-- <a href="#" class="label_wishlist">
+            <img src="<?php // echo THEME_URI; ?>/img/label_wishlist.svg" alt="wishlist">
+        </a>  -->
         
         <a href="<?php echo $product->get_permalink(); ?>" class="object_item_img">
             <img src="<?php echo esc_attr($img_url); ?>" alt="<?php echo esc_attr($product->get_name()); ?>">
@@ -109,12 +110,39 @@ $promotion = get_post_meta( $product->get_id(), '_promotion', true );
         
             <div class="object_desc_btn">
 
-                <a href="#" class="btn_transparent">заказать с установкой</a>
+                <a href="#" class="btn_transparent open_popup" data-popup-id="product_order_install" onclick="return false">
+                    заказать с установкой
+                </a>
 
-                <a href="#" class="btn">заказать в 1 клик</a>
+                <a href="#" class="btn open_popup" data-popup-id="product_order_click" onclick="return false">
+                    заказать в 1 клик
+                </a>
 
             </div> 
         </div> 
+
+        <?php 
+        get_template_part(
+            'template-parts/modals/request-call', 
+            null, 
+            [
+                'id' => 'product_order_install', 
+                'form' => $product_order_install_form
+            ]
+        ); 
+        ?>
+
+        <?php 
+        get_template_part(
+            'template-parts/modals/request-call', 
+            null, 
+            [
+                'id' => 'product_order_click', 
+                'form' => $product_order_click_form
+            ]
+        ); 
+        ?>
+
         <?php
         /**
          * Hook: woocommerce_before_shop_loop_item.

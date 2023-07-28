@@ -28,6 +28,46 @@
             "preview_size": "medium"
         },
         {
+            "key": "field_64c0d9798fab3",
+            "label": "ФИО",
+            "name": "full_name_b3",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_64c0d9958fab4",
+            "label": "Должность",
+            "name": "position_b3",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_64ac1b1317c58",
             "label": "Заглавие",
             "name": "title_b3",
@@ -233,5 +273,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1689009392
+    "modified": 1690360232
 }

@@ -1,31 +1,11 @@
 {
-    "key": "group_64ac093d805f3",
-    "title": "О нас",
+    "key": "group_64b96a91399b4",
+    "title": "Банер 4",
     "fields": [
         {
-            "key": "field_64ac093ec49e4",
-            "label": "Заглавие",
-            "name": "title_about",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_64ac09e5c49e5",
+            "key": "field_64b96a91449a4",
             "label": "Изображение",
-            "name": "img_id_about",
+            "name": "bg_img_b4",
             "aria-label": "",
             "type": "image",
             "instructions": "",
@@ -48,29 +28,9 @@
             "preview_size": "medium"
         },
         {
-            "key": "field_64be3ce9a6ce4",
-            "label": "Текст виджета",
-            "name": "txt_vidget_about",
-            "aria-label": "",
-            "type": "wysiwyg",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "tabs": "all",
-            "toolbar": "full",
-            "media_upload": 0,
-            "delay": 0
-        },
-        {
-            "key": "field_64ac0a0bc49e6",
-            "label": "ФИО",
-            "name": "full_name_about",
+            "key": "field_64b96a914844a",
+            "label": "Заглавие",
+            "name": "title_b4",
             "aria-label": "",
             "type": "textarea",
             "instructions": "",
@@ -88,11 +48,11 @@
             "new_lines": ""
         },
         {
-            "key": "field_64ac0a30c49e7",
-            "label": "Должность",
-            "name": "position_about",
+            "key": "field_64b96a914bf5a",
+            "label": "Описание",
+            "name": "desc_b4",
             "aria-label": "",
-            "type": "text",
+            "type": "wysiwyg",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -102,15 +62,15 @@
                 "id": ""
             },
             "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 0,
+            "delay": 0
         },
         {
-            "key": "field_64ac0a55c49e8",
+            "key": "field_64b96a914fba9",
             "label": "Текст кнопки",
-            "name": "txt_btn_about",
+            "name": "txt_btn_b4",
             "aria-label": "",
             "type": "text",
             "instructions": "",
@@ -128,9 +88,9 @@
             "append": ""
         },
         {
-            "key": "field_64ac0a75c49e9",
+            "key": "field_64b96a91535a0",
             "label": "Выбор формы",
-            "name": "form_about",
+            "name": "form_b4",
             "aria-label": "",
             "type": "post_object",
             "instructions": "",
@@ -150,26 +110,6 @@
             "multiple": 0,
             "allow_null": 0,
             "ui": 1
-        },
-        {
-            "key": "field_64ac0aa0c49ea",
-            "label": "Основной текст",
-            "name": "txt_about",
-            "aria-label": "",
-            "type": "wysiwyg",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "tabs": "all",
-            "toolbar": "full",
-            "media_upload": 1,
-            "delay": 0
         }
     ],
     "location": [
@@ -177,7 +117,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/about"
+                "value": "acf\/banner-4"
             }
         ]
     ],
@@ -190,5 +130,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1690189084
+    "modified": 1689873092
 }

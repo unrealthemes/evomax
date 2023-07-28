@@ -143,10 +143,20 @@ $form = get_field('form_f', 'option');
                                 <?php endif; ?>
 
                                 <div class="footer_btn">
-                                    <button type="button" class="btn open_popup" data-popup-id="<?php echo $id; ?>" onclick="return false">
+                                    <button type="button" class="btn open_popup" data-popup-id="footer_modal" onclick="return false">
                                         Заказать звонок
                                     </button>
                                 </div>
+                                <?php 
+                                get_template_part(
+                                    'template-parts/modals/request', 
+                                    'call', 
+                                    [
+                                        'id' => 'footer_modal', 
+                                        'form' => $form
+                                    ]
+                                ); 
+                                ?>
                                 
                             </div>
                         </div>
