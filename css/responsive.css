@@ -256,7 +256,7 @@ Tablet and Mobile
     .test:after  { content: '@media (max-width: 568px)';} 
     .nav_block_title {text-align: right;}
     .ul_grid {grid-template-columns:1fr; gap: 25px;}
-    .di_menu_text ul li{text-align: right;}
+    .di_menu_text ul li {text-align: right;}
     .top_head_img {width: 70%;}
     .top_head h1 {margin-top: 20px;}
     /* Tables */

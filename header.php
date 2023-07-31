@@ -44,10 +44,18 @@ $form = get_field('form_h', 'option'); // TO DO
                         </div>
                         
                         <div class="header_right">
+
                             <div class="main_search"> 
                                 <div class="visible_ps">
-                                    <form method="get" id="main_searchform" action="#">
-                                        <input class="main_search_input" type="search" placeholder="Поиск по сайту" required="">
+                                    <form method="get" id="main_searchform" role="search" action="<?php echo home_url('/'); ?>">
+                                        <input  class="main_search_input" 
+                                                type="search" 
+                                                value="<?php echo get_search_query(); ?>"  
+                                                name="s" 
+                                                id="s"
+                                                placeholder="Поиск по сайту" 
+                                                required>
+                                        <input type="hidden" name="post_type" value="product">
                                         <input type="submit" id="searchsubmit" class="main_submit" value="Найти">
                                     </form>
                                 </div> 

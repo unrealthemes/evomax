@@ -24,7 +24,7 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	return;
 }
 
-$img_url = get_the_post_thumbnail_url( $product->get_id(), 'full' );
+$img_url = get_the_post_thumbnail_url( $product->get_id(), 'medium' );
 $img_url = ( !$img_url ) ? wc_placeholder_img_src() : $img_url;
 $number_persons = get_post_meta( $product->get_id(), '_number_persons', true );
 $processing_volume = get_post_meta( $product->get_id(), '_processing_volume', true );
@@ -32,8 +32,6 @@ $salvo_drop = get_post_meta( $product->get_id(), '_salvo_drop', true );
 $turnkey_installation = get_post_meta( $product->get_id(), '_turnkey_installation', true );
 $novelty = get_post_meta( $product->get_id(), '_novelty', true );
 $promotion = get_post_meta( $product->get_id(), '_promotion', true );
-$product_order_install_form = get_field( 'product_order_install_form_prp', 'option' );
-$product_order_click_form = get_field( 'product_order_click_form_prp', 'option' );
 ?>
 
 <div <?php wc_product_class( 'item object_item', $product ); ?> > 
@@ -120,28 +118,6 @@ $product_order_click_form = get_field( 'product_order_click_form_prp', 'option' 
 
             </div> 
         </div> 
-
-        <?php 
-        get_template_part(
-            'template-parts/modals/request-call', 
-            null, 
-            [
-                'id' => 'product_order_install', 
-                'form' => $product_order_install_form
-            ]
-        ); 
-        ?>
-
-        <?php 
-        get_template_part(
-            'template-parts/modals/request-call', 
-            null, 
-            [
-                'id' => 'product_order_click', 
-                'form' => $product_order_click_form
-            ]
-        ); 
-        ?>
 
         <?php
         /**

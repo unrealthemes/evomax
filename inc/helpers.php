@@ -297,3 +297,20 @@ function ut_menu_hierarhy_items($menu_items) {
 
 	return $items_hierarhy;
 }
+
+
+
+function ut_cf7_func() {
+	
+	$id = rand(); // strtotime()
+	$tag = '<div class="input_checkbox">
+				<input id="' . $id . '" type="checkbox" name="1" value="1">
+				<label for="' . $id . '">
+					<span></span>
+					<div class="label_name">Соглашаюсь с политикой конфиденциальности</div>
+				</label> 
+			</div>';
+			
+	return $tag;
+}
+wpcf7_add_form_tag('evomax_acceptance', 'ut_cf7_func');

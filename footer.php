@@ -6,6 +6,8 @@ $shedules = get_field('shedules_f', 'option');
 $address = get_field('address_f', 'option');
 $txt = get_field('txt_f', 'option');
 $form = get_field('form_f', 'option');
+$product_order_install_form = get_field( 'product_order_install_form_prp', 'option' );
+$product_order_click_form = get_field( 'product_order_click_form_prp', 'option' );
 ?>
     
     </main>
@@ -190,7 +192,27 @@ $form = get_field('form_f', 'option');
 
     <?php get_template_part('template-parts/modals/search'); ?>
 
-    <?php // get_template_part('template-parts/modals/form'); ?>
+    <?php 
+    get_template_part(
+        'template-parts/modals/request-call', 
+        null, 
+        [
+            'id' => 'product_order_install', 
+            'form' => $product_order_install_form
+        ]
+    ); 
+    ?>
+
+    <?php 
+    get_template_part(
+        'template-parts/modals/request-call', 
+        null, 
+        [
+            'id' => 'product_order_click', 
+            'form' => $product_order_click_form
+        ]
+    ); 
+    ?>
 		
 	<?php wp_footer(); ?>
 

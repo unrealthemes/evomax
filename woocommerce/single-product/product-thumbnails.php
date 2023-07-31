@@ -29,7 +29,7 @@ $attachment_ids = $product->get_gallery_image_ids();
 if ( $attachment_ids && $product->get_image_id() ) {
 	foreach ( $attachment_ids as $attachment_id ) {
         $html  = '<div class="item">';
-    	$html .= sprintf( '<img src="%s" alt="%s">', esc_url( wp_get_attachment_url( $attachment_id, 'full' )), esc_html__( 'Awaiting product image', 'woocommerce' ) );
+    	$html .= sprintf( '<img src="%s" alt="%s">', esc_url( wp_get_attachment_url( $attachment_id, 'evomax-product' )), esc_html__( 'Awaiting product image', 'woocommerce' ) );
     	$html .= '</div>';
 		echo apply_filters( 'woocommerce_single_product_image_thumbnail_html', $html, $attachment_id ); // phpcs:disable WordPress.XSS.EscapeOutput.OutputNotEscaped
 	}

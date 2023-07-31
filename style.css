@@ -125,7 +125,7 @@ div.wpcf7-spam-blocked::after {
 }
 
 .prdctfltr_wc .prdctfltr_filter_inner {
-    padding: 10px !important;
+    padding: 0px 10px 10px 10px !important;
 }
 
 .prdctfltr_filter label {

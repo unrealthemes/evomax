@@ -42,11 +42,11 @@ $wrapper_classes   = apply_filters(
     <?php
     if ( $post_thumbnail_id ) {
     	$html  = '<div class="item">';
-    	$html .= sprintf( '<img src="%s" alt="%s">', esc_url( get_the_post_thumbnail_url( $product->get_id() )), esc_html__( 'Awaiting product image', 'woocommerce' ) );
+    	$html .= sprintf( '<img src="%s" alt="%s">', esc_url( get_the_post_thumbnail_url( $product->get_id(), 'evomax-product' )), esc_html__( 'Awaiting product image', 'woocommerce' ) );
     	$html .= '</div>';
     } else {
     	$html  = '<div class="item">';
-    	$html .= sprintf( '<img src="%s" alt="%s">', esc_url( wc_placeholder_img_src( 'woocommerce_single' ) ), esc_html__( 'Awaiting product image', 'woocommerce' ) );
+    	$html .= sprintf( '<img src="%s" alt="%s">', esc_url( wc_placeholder_img_src( 'evomax-product' ) ), esc_html__( 'Awaiting product image', 'woocommerce' ) );
     	$html .= '</div>';
     }
 
@@ -64,11 +64,11 @@ $wrapper_classes   = apply_filters(
     <?php
     if ( $post_thumbnail_id ) {
         $html  = '<div class="item">';
-    	$html .= sprintf( '<img src="%s" alt="%s">', esc_url( get_the_post_thumbnail_url( $product->get_id() )), esc_html__( 'Awaiting product image', 'woocommerce' ) );
+    	$html .= sprintf( '<img src="%s" alt="%s">', esc_url( get_the_post_thumbnail_url( $product->get_id(), 'evomax-product' )), esc_html__( 'Awaiting product image', 'woocommerce' ) );
     	$html .= '</div>';
     } else {
     	$html  = '<div class="item">';
-    	$html .= sprintf( '<img src="%s" alt="%s">', esc_url( wc_placeholder_img_src( 'woocommerce_single' ) ), esc_html__( 'Awaiting product image', 'woocommerce' ) );
+    	$html .= sprintf( '<img src="%s" alt="%s">', esc_url( wc_placeholder_img_src( 'evomax-product' ) ), esc_html__( 'Awaiting product image', 'woocommerce' ) );
     	$html .= '</div>';
     }
 

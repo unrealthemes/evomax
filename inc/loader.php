@@ -93,6 +93,7 @@ class UT_Theme_Helper {
 			'caption',
 		] );
 		add_theme_support( 'woocommerce' );
+		add_image_size( 'evomax-product', 515, 515, true );
 	}
 
 	// public function widgets_init() {
